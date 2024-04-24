@@ -1,0 +1,6 @@
+html[data-theme="default"] {
+  --primary: #A2CE93;
+  --secondary: #397959;
+  --tertiary: #7AAD63;
+  --quarternary: #F6FEF3;
+}
