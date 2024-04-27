@@ -1,15 +1,16 @@
-import Image from 'next/image'
+// import img from 'next/img'
 import Link from 'next/link'
 import Timeline from './components/Timeline/Timeline';
 import { JOBS, SKILLS } from './constants';
+// import { getAssetPath } from './utils';
 
 const Home = () => (
   <main className="flex flex-col items-center justify-between px-6 py-8 bg-quarternary gap-4 animate-[fadeIn_2s_ease-in-out]">
     <section className="hero-section flex flex-col w-full justify-between gap-4 h-[calc(100vh_-_128px)] relative md:justify-center">
       <div className="hero-info-section flex flex-col gap-2 items-center md:flex-row-reverse md:justify-center lg:justify-around">
-        <div className="hero-image-section flex items-center justify-center flex-col gap-4">
-          <Image 
-            src="/assets/michael-pp.jpeg" 
+        <div className="hero-img-section flex items-center justify-center flex-col gap-4">
+          <img
+            src="/assets/michael-pp.jpeg"
             className="rounded-full" 
             alt="hero-avatar" 
             width={288} 
@@ -17,14 +18,14 @@ const Home = () => (
           />
           <div className="flex items-center justify-center gap-2 mt-2">
             <Link href="https://www.linkedin.com/in/michaeldavidjansen" target="_blank">
-              <Image src="/assets/social-icons/linkedin.svg" alt="linkedin" width={30} height={30} />
+              <img src="/assets/social-icons/linkedin.svg" alt="linkedin" width={30} height={30} />
             </Link>
             <Link href="https://www.youtube.com/@WebDevDynamite" target="_blank">
-              <Image src="/assets/social-icons/youtube.svg" alt="youtube" width={30} height={30}  />
+              <img src="/assets/social-icons/youtube.svg" alt="youtube" width={30} height={30}  />
             </Link>
-            <Image src="/assets/social-icons/instagram.svg" alt="instagram" width={30} height={30} />
+            <img src="/assets/social-icons/instagram.svg" alt="instagram" width={30} height={30} />
             <Link href="https://github.com/MichaelDJansen" target="_blank">
-              <Image src="/assets/social-icons/github.svg" alt="github" width={30} height={30} />
+              <img src="/assets/social-icons/github.svg" alt="github" width={30} height={30} />
             </Link>
           </div>
         </div>
@@ -41,7 +42,7 @@ const Home = () => (
         <a href="#skills-section">
           Learn More
         </a>
-        <Image src="/assets/chevron-down.svg" alt="arrow-down" width={24} height={24} />
+        <img src="/assets/chevron-down.svg" alt="arrow-down" width={24} height={24} />
       </div>
     </section>
     <section id="skills-section" className="flex flex-col items-center bg-tertiary w-full text-white rounded-2xl gap-4 p-4">
@@ -51,15 +52,15 @@ const Home = () => (
       </section>
       <div className="skill-logo-container w-full overflow-hidden">
         <section className="skills-logos flex row gap-2 flex-1 flex-wrap justify-center opacity-50">
-          <Image src="/assets/technology-logos/react.png" alt="react-logo" width={40} height={40} />
-          <Image src="/assets/technology-logos/js.png" alt="javascript-logo" width={40} height={40} />
-          <Image src="/assets/technology-logos/node.png" alt="nodejs-logo" width={65} height={40} />
-          <Image src="/assets/technology-logos/jest.png" alt="jest-logo" width={40} height={40} />
-          <Image src="/assets/technology-logos/ts.png" alt="typescript-logo" width={40} height={40} />
-          <Image src="/assets/technology-logos/sql.png" alt="sql-logo" width={40} height={40} />
-          <Image src="/assets/technology-logos/sass.png" alt="sass-logo" width={54} height={40} />
-          <Image src="/assets/technology-logos/next-js.png" alt="next-js-logo" width={65} height={40} />
-          <Image src="/assets/technology-logos/storybook.png" alt="storybook-logo" width={35} height={40} />
+          <img src="/assets/technology-logos/react.png" alt="react-logo" width={40} height={40} />
+          <img src="/assets/technology-logos/js.png" alt="javascript-logo" width={40} height={40} />
+          <img src="/assets/technology-logos/node.png" alt="nodejs-logo" width={65} height={40} />
+          <img src="/assets/technology-logos/jest.png" alt="jest-logo" width={40} height={40} />
+          <img src="/assets/technology-logos/ts.png" alt="typescript-logo" width={40} height={40} />
+          <img src="/assets/technology-logos/sql.png" alt="sql-logo" width={40} height={40} />
+          <img src="/assets/technology-logos/sass.png" alt="sass-logo" width={54} height={40} />
+          <img src="/assets/technology-logos/next-js.png" alt="next-js-logo" width={65} height={40} />
+          <img src="/assets/technology-logos/storybook.png" alt="storybook-logo" width={35} height={40} />
         </section>
       </div>
     </section>
