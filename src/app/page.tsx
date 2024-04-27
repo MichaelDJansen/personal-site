@@ -1,10 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import Timeline from './components/Timeline/Timeline';
+import { JOBS, SKILLS } from './constants';
 
 const Home = () => {
   return (
     <main className="flex flex-col items-center justify-between px-6 py-8 bg-quarternary">
-      <section className="hero-section flex flex-col w-full justify-between gap-4">
+      <section className="hero-section flex flex-col w-full justify-between gap-4 h-[calc(100vh_-_128px)]">
         <div className="hero-image-section flex items-center justify-center flex-col">
           <Image src="/assets/michael-pp.jpeg" className="rounded-full" alt="hero-avatar" width={288} height={288}/>
           <div className="flex items-center justify-center gap-2 mt-2">
@@ -21,7 +23,7 @@ const Home = () => {
           </div>
         </div>
         <section className="hero-description">
-          <h1 className="hero-description-heading">Hi, I'm Michael. Nice to meet you!</h1>
+          <h1 className="hero-description-heading text-xl font-bold my-2">Hi, I'm Michael. Nice to meet you!</h1>
           <div className="hero-description-text">
             <p>I am a web developer from South Africa with 6+ years of experience</p>
             <p>My goal is to create applications to make people's lives easier</p>
@@ -37,24 +39,11 @@ const Home = () => {
       </section>
       <section id="skills-section" className="flex flex-col items-center bg-tertiary w-full text-white rounded-2xl gap-4 p-4">
         <h2 className='text-xl font-bold'>Skills</h2>
-        <section className="skill-names flex justify-around w-full">
-          <div>
-            <p>React</p>
-            <p>Node.js</p>
-            <p>Jest</p>
-            <p>Next.js</p>
-            <p>SCSS</p>
-          </div>
-          <div>
-            <p>TypeScript</p>
-            <p>JavaScript</p>
-            <p>SQL</p>
-            <p>React Native</p>
-            <p>Storybook.js</p>
-          </div>
+        <section className="skill-names grid grid-cols-2 w-full text-center">
+          {SKILLS.map(skill => <p>{skill}</p>)}
         </section>
         <div className="skill-logo-container w-full overflow-hidden">
-          <section className="skills-logos flex row gap-2 flex-1 flex-wrap">
+          <section className="skills-logos flex row gap-2 flex-1 flex-wrap justify-center opacity-50">
             <Image src="/assets/technology-logos/react.png" alt="react-logo" width={40} height={40} />
             <Image src="/assets/technology-logos/js.png" alt="javascript-logo" width={40} height={40} />
             <Image src="/assets/technology-logos/node.png" alt="nodejs-logo" width={65} height={40} />
@@ -66,6 +55,12 @@ const Home = () => {
             <Image src="/assets/technology-logos/storybook.png" alt="storybook-logo" width={35} height={40} />
           </section>
         </div>
+      </section>
+      <section id="experience-section">
+        <h2 className="section-header text-center text-xl text-bold m-4">
+          Experience
+        </h2>
+        <Timeline items={JOBS} />
       </section>
     </main>
   )

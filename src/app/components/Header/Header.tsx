@@ -11,7 +11,9 @@ const Header: React.FC<THeaderProps> = ({ className }) => (
       <a href="#">Skills</a>
       <a href="#">Experience</a>
     </nav>
-    <Button text="Contact Me" />
+    <a href="mailto:michaeldjansen35@gmail.com">
+      <Button text="Contact Me" />
+    </a>
   </div>
 );
 
