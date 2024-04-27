@@ -9,7 +9,7 @@ const lato = Lato({subsets: ["latin"], weight: ["400", "700"]});
 
 export const metadata = {
   title: 'Michael David Jansen',
-  description: 'Web developer Portfolio Site',
+  description: 'Web Developer Portfolio Site',
 };
 
 type TRootLayout = {
@@ -20,6 +20,7 @@ const RootLayout: React.FC<TRootLayout> = ({
   children
 }) => (
   <html lang="en" data-theme="default">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-32x32.png" />
     <body className={`${lato.className} bg-quarternary min-h-screen grid grid-rows-layout`}>
       <Header />
       {children}

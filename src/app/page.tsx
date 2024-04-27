@@ -5,11 +5,17 @@ import { JOBS, SKILLS } from './constants';
 
 const Home = () => {
   return (
-    <main className="flex flex-col items-center justify-between px-6 py-8 bg-quarternary gap-4">
+    <main className="flex flex-col items-center justify-between px-6 py-8 bg-quarternary gap-4 animate-[fadeIn_2s_ease-in-out]">
       <section className="hero-section flex flex-col w-full justify-between gap-4 h-[calc(100vh_-_128px)] relative md:justify-center">
         <div className="hero-info-section flex flex-col gap-2 items-center md:flex-row-reverse md:justify-center lg:justify-around">
           <div className="hero-image-section flex items-center justify-center flex-col gap-4">
-            <Image src="/assets/michael-pp.jpeg" className="rounded-full" alt="hero-avatar" width={288} height={288}/>
+            <Image 
+              src="/assets/michael-pp.jpeg" 
+              className="rounded-full" 
+              alt="hero-avatar" 
+              width={288} 
+              height={288} 
+            />
             <div className="flex items-center justify-center gap-2 mt-2">
               <Link href="https://www.linkedin.com/in/michaeldavidjansen" target="_blank">
                 <Image src="/assets/social-icons/linkedin.svg" alt="linkedin" width={30} height={30} />
@@ -40,7 +46,7 @@ const Home = () => {
         </div>
       </section>
       <section id="skills-section" className="flex flex-col items-center bg-tertiary w-full text-white rounded-2xl gap-4 p-4">
-        <h2 className='text-xl font-bold'>Skills</h2>
+        <h2 className='text-xl lg:text-2xl font-bold'>Skills</h2>
         <section className="skill-names grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-2 w-full text-center">
           {SKILLS.map((skill, index) => <p>{skill}</p>)}
         </section>
@@ -59,7 +65,7 @@ const Home = () => {
         </div>
       </section>
       <section id="experience-section">
-        <h2 className="section-header text-center text-xl text-bold m-4">
+        <h2 className="section-header text-center text-xl lg:text-2xl font-bold m-4">
           Experience
         </h2>
         <Timeline items={JOBS} />
