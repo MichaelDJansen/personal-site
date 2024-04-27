@@ -33,7 +33,7 @@ const TimelineItem: React.FC<TTimelineItemProps>  = ({
                 {jobDescription}
             </p>
             <div className="company-skills flex gap-2 flex-wrap mt-2">
-                {jobSkills.map(skill => <Tag text={skill}/>)}
+                {jobSkills.map((skill, index) => <Tag key={index} text={skill} />)}
             </div>
         </div>
     </div>

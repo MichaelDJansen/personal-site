@@ -6,7 +6,7 @@ type TTimelineProps = {
   
 const Timeline: React.FC<TTimelineProps>  = ({ items }) => (
     <div className="timeline flex flex-col gap-3">
-        {items.map(item => <TimelineItem {...item}/>)}
+        {items.map((item, index) => <TimelineItem key={index} {...item}/>)}
     </div>
 );
 
