@@ -24,8 +24,8 @@ const Home = () => {
             </div>
           </div>
           <section className="hero-description">
-            <h1 className="hero-description-heading text-xl font-bold my-2">Hi, I'm Michael. Nice to meet you!</h1>
-            <div className="hero-description-text">
+            <h1 className="hero-description-heading text-xl lg:text-4xl font-bold my-2">Hi, I'm Michael. Nice to meet you!</h1>
+            <div className="hero-description-text text-md lg:text-lg">
               <p>I am a web developer from South Africa with 6+ years of experience</p>
               <p>My goal is to create applications to make people's lives easier</p>
               <p>My tools of choice are React.js, SCSS, Next.js and Redux</p>
@@ -33,9 +33,9 @@ const Home = () => {
           </section>
         </div>
         <div className="learn-more-button-container flex flex-col items-center justify-center relative animate-bounce md:absolute md:w-full md:bottom-0">
-          <Link href="#">
+          <a href="#skills-section">
             Learn More
-          </Link>
+          </a>
           <Image src="/assets/chevron-down.svg" alt="arrow-down" width={24} height={24} />
         </div>
       </section>
