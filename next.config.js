@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
+const isDev = process.env.NODE_ENV === 'development'
+
 const nextConfig = {
-    basePath: "/personal-site",
+    basePath: isDev ? '' : "/personal-site",
     output: "export", 
     reactStrictMode: true,
   };

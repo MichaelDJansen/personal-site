@@ -4,6 +4,7 @@ import './globals.css'
 import './themes/default.css';
 
 import { Lato } from 'next/font/google'
+import { getAssetPath } from './utils';
 
 const lato = Lato({subsets: ["latin"], weight: ["400", "700"]});
 
@@ -20,7 +21,7 @@ const RootLayout: React.FC<TRootLayout> = ({
   children
 }) => (
   <html lang="en" data-theme="default">
-    <link rel="icon" type="image/x-icon" href="/assets/favicon-32x32.png" />
+    <link rel="icon" type="image/x-icon" href={getAssetPath("/assets/favicon-32x32.png")} />
     <body className={`${lato.className} bg-quarternary min-h-screen grid grid-rows-layout`}>
       <Header />
       {children}
