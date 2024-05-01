@@ -32,7 +32,7 @@ const Home = () => (
         <section className="hero-description">
           <h1 className="hero-description-heading text-xl lg:text-4xl font-bold my-2">Hi, I&apos;m Michael. Nice to meet you!</h1>
           <div className="hero-description-text text-md lg:text-lg">
-            <p>I am a web developer from South Africa with 6+ years of experience</p>
+            <p>I am a web developer from South Africa with 8+ years of experience</p>
             <p>My goal is to create applications to make people&apos;s lives easier</p>
             <p>My tools of choice are React.js, SCSS, Next.js and Redux</p>
           </div>
