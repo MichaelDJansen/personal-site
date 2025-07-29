@@ -49,16 +49,24 @@ npm run lint
 ## Project Structure
 
 ```
-src/app/
-├── components/          # Reusable UI components
-│   ├── Timeline/       # Work experience timeline
-│   ├── Header/         # Site header with navigation
-│   ├── Footer/         # Site footer
-│   └── Tag/           # Skill/technology tags
-├── constants.ts        # Job history and skills data
-├── utils/             # Utility functions (asset paths)
-├── themes/            # CSS custom properties
-└── page.tsx           # Main portfolio page
+src/
+├── app/
+│   └── page.tsx           # Main portfolio page
+├── components/            # Reusable UI components
+│   ├── Button/           # Button component
+│   ├── Footer/           # Site footer
+│   ├── Header/           # Site header with navigation
+│   ├── Tag/             # Skill/technology tags
+│   └── Timeline/        # Work experience timeline
+│       └── TimelineItem/ # Individual timeline entries
+├── constants.ts          # Job history and skills data
+├── globals.css          # Global styles
+├── layout.tsx           # Root layout component
+├── lib/                 # Library utilities
+├── themes/              # CSS custom properties
+│   └── default.css      # Default theme variables
+└── utils/               # Utility functions
+    └── index.ts         # Asset path utilities
 ```
 
 ## Key Features
@@ -69,11 +77,14 @@ The site is configured for static export with conditional basePath handling:
 - Production: `/personal-site` basePath for GitHub Pages
 
 ### Asset Management
-Uses a custom `getAssetPath()` utility to handle asset paths correctly across development and production environments.
+Uses a custom `getAssetPath()` utility to handle asset paths correctly across development and production environments. Assets are stored in both `public/assets/` and `src/assets/` directories.
 
 ### Component Architecture
-- **Timeline**: Displays work experience chronologically
-- **TimelineItem**: Individual job entries with descriptions and skill tags
+- **Button**: Reusable button component
+- **Header/Footer**: Layout components for site navigation and footer content
+- **Timeline**: Displays work experience chronologically using TimelineItem components
+- **TimelineItem**: Individual job entries with company details, descriptions, and skill tags
+- **Tag**: Reusable skill/technology tags
 - **Responsive Grid**: CSS Grid layout for optimal viewing on all devices
 
 ## Deployment
@@ -82,7 +93,9 @@ This site is configured for deployment to GitHub Pages using static export. The 
 
 ## Development Notes
 
-- Edit content in `src/app/constants.ts` to update job history and skills
-- Modify theme colors in `src/app/themes/default.css`
-- Add new components in `src/app/components/` following existing patterns
-- All asset references should use the `getAssetPath()` utility
+- Edit content in `src/constants.ts` to update job history and skills
+- Modify theme colors in `src/themes/default.css`
+- Add new components in `src/components/` following existing patterns
+- All asset references should use the `getAssetPath()` utility from `src/utils/index.ts`
+- Global styles are defined in `src/globals.css`
+- Root layout is in `src/layout.tsx`

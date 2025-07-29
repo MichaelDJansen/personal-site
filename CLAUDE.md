@@ -17,22 +17,25 @@ This is a Next.js 13+ portfolio website using the App Router with TypeScript and
 
 - **Static Export**: Configured with `output: "export"` in next.config.js
 - **Conditional BasePath**: Uses `/personal-site` for production, empty for development
-- **Asset Path Utility**: The `getAssetPath()` function in `src/app/utils/index.ts` handles asset paths correctly for both dev and production
+- **Asset Path Utility**: The `getAssetPath()` function in `src/utils/index.ts` handles asset paths correctly for both dev and production
 
 ### Project Structure
 
-- **Layout**: `src/app/layout.tsx` defines the root layout with header/footer grid structure
+- **Layout**: `src/layout.tsx` defines the root layout with header/footer grid structure
 - **Main Page**: `src/app/page.tsx` contains the portfolio homepage with hero, skills, and experience sections
-- **Components**: Located in `src/app/components/` with each component in its own folder
-- **Constants**: `src/app/constants.ts` contains job history and skills data
-- **Themes**: CSS custom properties defined in `src/app/themes/default.css`
+- **Components**: Located in `src/components/` with each component in its own folder (Button, Footer, Header, Tag, Timeline with TimelineItem)
+- **Constants**: `src/constants.ts` contains job history and skills data
+- **Themes**: CSS custom properties defined in `src/themes/default.css`
+- **Global Styles**: `src/globals.css` contains global styling
+- **Utilities**: `src/utils/index.ts` contains helper functions like `getAssetPath()`
 
 ### Component Architecture
 
+- **Button**: Reusable button component located in `src/components/Button/`
+- **Header/Footer**: Layout components for site navigation and footer content
 - **Timeline**: Displays work experience using TimelineItem components
 - **TimelineItem**: Individual job entries with company details, descriptions, and skill tags
 - **Tag**: Reusable skill/technology tags
-- **Header/Footer**: Layout components for site navigation and footer content
 
 ### Styling System
 
@@ -43,9 +46,9 @@ This is a Next.js 13+ portfolio website using the App Router with TypeScript and
 
 ### Asset Management
 
-- Assets stored in `public/assets/` and `src/app/assets/`
+- Assets stored in `public/assets/` directory
 - Use `getAssetPath()` utility for all asset references to handle basePath correctly
-- Images include profile photo, social icons, and technology logos
+- Images include profile photo, social icons (GitHub, Instagram, LinkedIn, YouTube), and technology logos (Jest, JS, Next.js, Node, React, Sass, SQL, Storybook, TypeScript)
 
 ### Development Notes
 
