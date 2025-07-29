@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
 import Timeline from '../components/Timeline/Timeline';
-import { JOBS, SKILLS, SKILL_LOGOS } from '../constants';
+import { JOBS, SKILLS, SKILL_LOGOS, SOCIAL_LINKS } from '../constants';
 import { getAssetPath } from '../utils';
 
 const Home = () => (
@@ -15,16 +15,16 @@ const Home = () => (
             alt="hero-avatar" 
           />
           <div className="flex items-center justify-center gap-2 mt-2">
-            <Link href="https://www.linkedin.com/in/michaeldavidjansen" target="_blank">
-              <img src={getAssetPath("/assets/social-icons/linkedin.svg")} alt="linkedin" width={30} height={30} />
-            </Link>
-            <Link href="https://www.youtube.com/@WebDevDynamite" target="_blank">
-              <img src={getAssetPath("/assets/social-icons/youtube.svg")} alt="youtube" width={30} height={30}  />
-            </Link>
-            <img src={getAssetPath("/assets/social-icons/instagram.svg")} alt="instagram" width={30} height={30} />
-            <Link href="https://github.com/MichaelDJansen" target="_blank">
-              <img src={getAssetPath("/assets/social-icons/github.svg")} alt="github" width={30} height={30} />
-            </Link>
+            {SOCIAL_LINKS.map((social, index) => (
+                <Link key={index} href={social.url} target="_blank">
+                  <img
+                    src={getAssetPath(social.iconSrc)}
+                    alt={social.alt}
+                    width={social.width}
+                    height={social.height}
+                  />
+                </Link>
+            ))}
           </div>
         </div>
         <section className="hero-description text-center md:text-left">

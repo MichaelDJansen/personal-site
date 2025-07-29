@@ -1,5 +1,14 @@
 import { TTimelineItemProps } from "./components/Timeline/TimelineItem/TimelineItem";
 
+type TSocialLink = {
+        name: string,
+        url: string,
+        iconSrc: string,
+        alt: string,
+        width: number,
+        height: number
+};
+
 export const JOBS: Array<TTimelineItemProps> = [
     {
         companyName: 'xneelo',
@@ -61,6 +70,41 @@ export const SKILLS: Array<string> = [
     "SQL",
     "React Native",
     "Storybook.js",
+];
+
+export const SOCIAL_LINKS: Array<TSocialLink> = [
+    {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/michaeldavidjansen",
+        iconSrc: "/assets/social-icons/linkedin.svg",
+        alt: "linkedin",
+        width: 30,
+        height: 30
+    },
+    {
+        name: "YouTube",
+        url: "https://www.youtube.com/@WebDevDynamite",
+        iconSrc: "/assets/social-icons/youtube.svg",
+        alt: "youtube",
+        width: 30,
+        height: 30
+    },
+    {
+        name: "Instagram",
+        url: "#",
+        iconSrc: "/assets/social-icons/instagram.svg",
+        alt: "instagram",
+        width: 30,
+        height: 30
+    },
+    {
+        name: "GitHub",
+        url: "https://github.com/MichaelDJansen",
+        iconSrc: "/assets/social-icons/github.svg",
+        alt: "github",
+        width: 30,
+        height: 30
+    }
 ];
 
 export const SKILL_LOGOS = [
