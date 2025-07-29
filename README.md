@@ -1,34 +1,88 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Michael David Jansen - Portfolio Site
+
+A modern portfolio website showcasing web development experience and skills, built with Next.js 13+ App Router, TypeScript, and Tailwind CSS.
+
+## Features
+
+- **Responsive Design**: Mobile-first approach with smooth animations
+- **Modern Stack**: Next.js 13+ with App Router, TypeScript, and Tailwind CSS
+- **Static Export**: Optimized for GitHub Pages deployment
+- **Experience Timeline**: Interactive work history with skill tags
+- **Skills Showcase**: Technology logos and proficiency display
+- **Social Integration**: Links to LinkedIn, YouTube, Instagram, and GitHub
+
+## Tech Stack
+
+- **Framework**: Next.js 13+ with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS with custom CSS properties
+- **Font**: Space Grotesk from Google Fonts
+- **Deployment**: Static export for GitHub Pages
 
 ## Getting Started
 
-First, run the development server:
+### Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site in development mode.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Building
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+# Build for production
+npm run build
 
-## Learn More
+# Start production server (after build)
+npm run start
 
-To learn more about Next.js, take a look at the following resources:
+# Run linting
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+src/app/
+├── components/          # Reusable UI components
+│   ├── Timeline/       # Work experience timeline
+│   ├── Header/         # Site header with navigation
+│   ├── Footer/         # Site footer
+│   └── Tag/           # Skill/technology tags
+├── constants.ts        # Job history and skills data
+├── utils/             # Utility functions (asset paths)
+├── themes/            # CSS custom properties
+└── page.tsx           # Main portfolio page
+```
 
-## Deploy on Vercel
+## Key Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Static Export Configuration
+The site is configured for static export with conditional basePath handling:
+- Development: Standard Next.js routing
+- Production: `/personal-site` basePath for GitHub Pages
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Asset Management
+Uses a custom `getAssetPath()` utility to handle asset paths correctly across development and production environments.
+
+### Component Architecture
+- **Timeline**: Displays work experience chronologically
+- **TimelineItem**: Individual job entries with descriptions and skill tags
+- **Responsive Grid**: CSS Grid layout for optimal viewing on all devices
+
+## Deployment
+
+This site is configured for deployment to GitHub Pages using static export. The build process generates static HTML/CSS/JS files in the `out/` directory.
+
+## Development Notes
+
+- Edit content in `src/app/constants.ts` to update job history and skills
+- Modify theme colors in `src/app/themes/default.css`
+- Add new components in `src/app/components/` following existing patterns
+- All asset references should use the `getAssetPath()` utility
