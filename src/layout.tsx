@@ -1,10 +1,10 @@
-import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
+import Footer from '../components/Footer/Footer';
+import Header from '../components/Header/Header';
 import './globals.css'
 import './themes/default.css';
 
 import { Space_Grotesk } from 'next/font/google'
-import { getAssetPath } from './utils';
+import { getAssetPath } from '../utils';
 
 const spaceGrotesk = Space_Grotesk({subsets: ["latin"], weight: ["400", "700"]});
 

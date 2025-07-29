@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
-import Timeline from './components/Timeline/Timeline';
-import { JOBS, SKILLS } from './constants';
-import { getAssetPath } from './utils';
+import Timeline from '../components/Timeline/Timeline';
+import { JOBS, SKILLS } from '../constants';
+import { getAssetPath } from '../utils';
 
 const Home = () => (
   <main className="flex flex-col items-center justify-between px-6 py-8 bg-quarternary gap-4 animate-[fadeIn_2s_ease-in-out]">
