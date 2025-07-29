@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
 import Timeline from '../components/Timeline/Timeline';
-import { JOBS, SKILLS } from '../constants';
+import { JOBS, SKILLS, SKILL_LOGOS } from '../constants';
 import { getAssetPath } from '../utils';
 
 const Home = () => (
@@ -50,15 +50,15 @@ const Home = () => (
       </section>
       <div className="skill-logo-container w-full overflow-hidden">
         <section className="skills-logos flex row gap-2 flex-1 flex-wrap justify-center opacity-50">
-          <img src={getAssetPath("/assets/technology-logos/react.png")} alt="react-logo" width={40} height={40} />
-          <img src={getAssetPath("/assets/technology-logos/js.png")} alt="javascript-logo" width={40} height={40} />
-          <img src={getAssetPath("/assets/technology-logos/node.png")} alt="nodejs-logo" width={65} height={40} />
-          <img src={getAssetPath("/assets/technology-logos/jest.png")} alt="jest-logo" width={40} height={40} />
-          <img src={getAssetPath("/assets/technology-logos/ts.png")} alt="typescript-logo" width={40} height={40} />
-          <img src={getAssetPath("/assets/technology-logos/sql.png")} alt="sql-logo" width={40} height={40} />
-          <img src={getAssetPath("/assets/technology-logos/sass.png")} alt="sass-logo" width={54} height={40} />
-          <img src={getAssetPath("/assets/technology-logos/next-js.png")} alt="next-js-logo" width={65} height={40} />
-          <img src={getAssetPath("/assets/technology-logos/storybook.png")} alt="storybook-logo" width={35} height={40} />
+          {SKILL_LOGOS.map((logo, index) => (
+            <img 
+              key={index}
+              src={getAssetPath(logo.src)} 
+              alt={logo.alt} 
+              width={logo.width} 
+              height={logo.height} 
+            />
+          ))}
         </section>
       </div>
     </section>
