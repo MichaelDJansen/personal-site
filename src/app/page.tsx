@@ -28,7 +28,7 @@ const Home = () => (
           </div>
         </div>
         <section className="hero-description text-center md:text-left">
-          <h1 className="hero-description-heading text-3xl lg:text-6xl font-bold mb-2 md:mb-4 lg:mb-8">Hi, I&apos;m <span className="text-secondary">Michael</span>. Nice to meet you!</h1>
+          <h1 className="hero-description-heading text-2xl md:text-4xl lg:text-6xl font-bold mb-2 md:mb-4 lg:mb-8">Hi, I&apos;m <span className="text-secondary">Michael</span>. Nice to meet you!</h1>
           <div className="hero-description-text text-lg lg:text-xl">
             <p>I am a web developer from South Africa with 9+ years of experience</p>
             <p>My goal is to create applications to make people&apos;s lives easier</p>

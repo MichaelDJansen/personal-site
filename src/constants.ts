@@ -46,7 +46,7 @@ export const JOBS: Array<TTimelineItemProps> = [
         companyEndDate: new Date(2016, 8, 1),
         jobPosition: 'IT Contractor', 
         jobDescription: 'I analysed trends in incidents, requests and changes using the MS Office Suite. I also applied data fixes using SQL', 
-        jobSkills: ['Oracle SQL', 'Word', 'Visio', 'Oracle APEX']
+        jobSkills: ['SQL', 'Word', 'Visio', 'Oracle APEX']
     },
 ];
 
