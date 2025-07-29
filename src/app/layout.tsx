@@ -3,10 +3,10 @@ import Header from './components/Header/Header';
 import './globals.css'
 import './themes/default.css';
 
-import { Lato } from 'next/font/google'
+import { Space_Grotesk } from 'next/font/google'
 import { getAssetPath } from './utils';
 
-const lato = Lato({subsets: ["latin"], weight: ["400", "700"]});
+const spaceGrotesk = Space_Grotesk({subsets: ["latin"], weight: ["400", "700"]});
 
 export const metadata = {
   title: 'Michael David Jansen',
@@ -22,7 +22,7 @@ const RootLayout: React.FC<TRootLayout> = ({
 }) => (
   <html lang="en" data-theme="default">
     <link rel="icon" type="image/x-icon" href={getAssetPath("/assets/favicon-32x32.png")} />
-    <body className={`${lato.className} bg-quarternary min-h-screen grid grid-rows-layout`}>
+    <body className={`${spaceGrotesk.className} bg-quarternary min-h-screen grid grid-rows-layout`}>
       <Header />
       {children}
       <Footer />

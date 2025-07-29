@@ -3,8 +3,8 @@ import { TTimelineItemProps } from "./components/Timeline/TimelineItem/TimelineI
 export const JOBS: Array<TTimelineItemProps> = [
     {
         companyName: 'xneelo',
-        companyDuration: '1 year 5 months',
-        companyYears: '2022 - 2023',
+        companyDuration: '1 year 11 months',
+        companyYears: '2023 - Present',
         jobPosition: 'Software Engineer',
         jobDescription: 'I created new features and maintenance on web applications using React.js, Jest as well as API\'s using Ruby on Rails and rspec. I managed front-end expectations and assist in directing future decisions around UX',
         jobSkills: ['React', 'Ruby on Rails', 'Jest', 'Cypress'],
@@ -43,7 +43,7 @@ export const JOBS: Array<TTimelineItemProps> = [
     },
     {
         companyName: 'Woolworths', 
-        companyDuration: '1year 2months', 
+        companyDuration: '1 year 2 months', 
         companyYears: '2015 - 2016', 
         jobPosition: 'IT Contractor', 
         jobDescription: 'I analysed trends in incidents, requests and changes using the MS Office Suite. I also applied data fixes using SQL', 
