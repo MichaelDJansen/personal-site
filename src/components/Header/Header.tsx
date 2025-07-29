@@ -1,4 +1,4 @@
-import { getAssetPath } from "@/app/utils";
+import { getAssetPath } from "@/utils";
 import Button from "../Button/Button";
 
 type THeaderProps = {
