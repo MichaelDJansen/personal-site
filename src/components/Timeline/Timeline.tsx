@@ -5,7 +5,7 @@ type TTimelineProps = {
 };
   
 const Timeline: React.FC<TTimelineProps>  = ({ items }) => (
-    <div className="timeline flex flex-col gap-3">
+    <div className="timeline flex flex-col gap-3" role="list" aria-label="Work experience timeline">
         {items.map((item, index) => <TimelineItem key={index} {...item}/>)}
     </div>
 );

@@ -42,26 +42,30 @@ const TimelineItem: React.FC<TTimelineItemProps>  = ({
     jobPosition, 
     jobSkills
  }) => (
-    <div className="timeline-item grid grid-cols-[1fr_30px_2fr]">
+    <article className="timeline-item grid grid-cols-[1fr_30px_2fr]" role="listitem">
         <div className='left-hand-side flex flex-col items-end text-right pr-2'>
-            <strong className='company-name'>{companyName}</strong>
-            <p className="company-duration">{`${companyStartDate.getFullYear()} - ${companyEndDate ? companyEndDate.getFullYear() : 'Present'}`}</p>
-            <p className="company-years">{getCompanyDuration(companyStartDate, companyEndDate)}</p>
+            <h3 className='company-name font-bold'>{companyName}</h3>
+            <time className="company-duration" dateTime={`${companyStartDate.getFullYear()}-${companyStartDate.getMonth()+1}`}>
+                {`${companyStartDate.getFullYear()} - ${companyEndDate ? companyEndDate.getFullYear() : 'Present'}`}
+            </time>
+            <p className="company-years" aria-label={`Duration: ${getCompanyDuration(companyStartDate, companyEndDate)}`}>
+                {getCompanyDuration(companyStartDate, companyEndDate)}
+            </p>
         </div>
-        <div className="divider w-8">
+        <div className="divider w-8" aria-hidden="true">
             <span className="circle h-4 w-4 bg-white border border-black rounded-[50%] inline-block absolute z-10" />
             <div className="vertical-line border-l border-l-black h-full relative top-4 left-2 "/>
         </div>
         <div className="right-hand-side">
-            <strong className="company-position">{jobPosition}</strong>
+            <h4 className="company-position font-bold">{jobPosition}</h4>
             <p className="company-description">
                 {jobDescription}
             </p>
-            <div className="company-skills flex gap-2 flex-wrap mt-2">
+            <div className="company-skills flex gap-2 flex-wrap mt-2" role="list" aria-label="Technologies used">
                 {jobSkills.map((skill, index) => <Tag key={index} text={skill} />)}
             </div>
         </div>
-    </div>
+    </article>
 );
 
 export default TimelineItem;

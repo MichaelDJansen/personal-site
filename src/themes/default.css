@@ -1,6 +1,41 @@
 html[data-theme="default"] {
-  --primary: #A2CE93;
-  --secondary: #397959;
-  --tertiary: #7AAD63;
-  --quarternary: #F6FEF3;
+  /* Primary Colors - Green Scale */
+  --primary-50: #f0f9ee;
+  --primary-100: #dcf2d4;
+  --primary-200: #bce5ae;
+  --primary-300: #A2CE93; /* Your original primary */
+  --primary-400: #7bb869;
+  --primary-500: #5a9c47; /* Better contrast for text */
+  --primary-600: #397959; /* Your original secondary */
+  --primary-700: #2d5c43;
+  --primary-800: #234a35;
+  --primary-900: #1c3d2c;
+
+  /* Neutral Colors */
+  --neutral-50: #F6FEF3; /* Your original quaternary */
+  --neutral-100: #f1f5f9;
+  --neutral-200: #e2e8f0;
+  --neutral-300: #cbd5e1;
+  --neutral-400: #94a3b8;
+  --neutral-500: #64748b;
+  --neutral-600: #475569;
+  --neutral-700: #334155;
+  --neutral-800: #1e293b;
+  --neutral-900: #0f172a;
+
+  /* Semantic Colors with good contrast */
+  --success: #059669;
+  --warning: #d97706;
+  --error: #dc2626;
+  --info: #0284c7;
+
+  /* Legacy color mappings for compatibility */
+  --primary: var(--primary-300); /* A2CE93 */
+  --secondary: var(--primary-600); /* 397959 - good contrast for text on light backgrounds */
+  --tertiary: #5a9c47; /* Updated to primary-500 for better contrast */
+  --quarternary: var(--neutral-50); /* F6FEF3 */
+
+  /* Focus ring colors */
+  --focus-ring: var(--primary-500);
+  --focus-ring-offset: var(--neutral-50);
 }

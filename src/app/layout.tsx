@@ -1,5 +1,6 @@
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
+import SkipLink from '../components/SkipLink/SkipLink';
 import '../globals.css'
 import '../themes/default.css';
 
@@ -23,8 +24,11 @@ const RootLayout: React.FC<TRootLayout> = ({
   <html lang="en" data-theme="default">
     <link rel="icon" type="image/x-icon" href={getAssetPath("/assets/favicon-32x32.png")} />
     <body className={`${spaceGrotesk.className} bg-quarternary min-h-screen grid grid-rows-layout`}>
+      <SkipLink />
       <Header />
-      {children}
+      <main id="main-content">
+        {children}
+      </main>
       <Footer />
     </body>
   </html>
