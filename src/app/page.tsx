@@ -8,7 +8,7 @@ import { getAssetPath } from '../utils';
 
 const Home = () => (
   <div className="flex flex-col items-center justify-between px-6 py-8 bg-quarternary gap-4 animate-[fadeIn_0.8s_ease-in-out]">
-    <section id="hero-section" className="hero-section flex flex-col w-full justify-between gap-4 h-[calc(100vh_-_128px)] relative md:justify-center" aria-labelledby="hero-heading">
+    <section id="hero-section" className="hero-section flex flex-col w-full justify-between gap-4 h-[calc(100vh-128px)] relative md:justify-center" aria-labelledby="hero-heading">
       <div className="hero-info-section flex flex-col gap-2 items-center px-12 md:flex-row-reverse md:justify-center lg:justify-around">
         <div className="hero-img-section flex items-center justify-center flex-col gap-4">
           <img

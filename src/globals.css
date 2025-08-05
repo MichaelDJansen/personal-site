@@ -1,6 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-quarternary: var(--quarternary);
+  --shadow-button: 0px 4px 4px 0px rgba(0,0,0,0.25);
+  --grid-template-rows-layout: 96px auto 96px;
+}
 
 html {
     scroll-behavior: smooth;
