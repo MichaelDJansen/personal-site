@@ -91,7 +91,7 @@ export const SOCIAL_LINKS: Array<TSocialLink> = [
     },
     {
         name: "Instagram",
-        url: "#",
+        url: "https://www.instagram.com/webdevdynamite/",
         iconSrc: "/assets/social-icons/instagram.svg",
         alt: "instagram",
         width: 30,

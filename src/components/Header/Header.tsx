@@ -6,6 +6,7 @@ import { getAssetPath } from "@/utils";
 import Button from "../Button/Button";
 import HamburgerButton from "../HamburgerButton/HamburgerButton";
 import MobileMenu from "../MobileMenu/MobileMenu";
+import Link from 'next/link';
 
 type THeaderProps = {
   className?: string;
@@ -25,7 +26,9 @@ const Header: React.FC<THeaderProps> = ({ className }) => {
   return (
     <>
       <header className={`bg-secondary text-white px-4 py-4 w-full flex justify-between items-center gap-2 sticky top-0 z-10 ${className ?? ""}`} role="banner">
-        <img className="header-logo cursor-pointer" alt="site logo" src={getAssetPath("/assets/MJ-logo.png")} width={64} height={64} />
+        <a href="#" aria-label="Navigate to hero section">
+          <img className="header-logo cursor-pointer" alt="site logo" src={getAssetPath("/assets/MJ-logo.png")} width={64} height={64} />
+        </a>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-4" role="navigation" aria-label="Main navigation">
