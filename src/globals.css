@@ -80,11 +80,150 @@ button:hover {
     animation: skeleton 1.5s infinite linear;
 }
 
+/* Micro-interaction keyframes */
 @keyframes fadeIn {
     0% {
         opacity: 0;
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes socialIconEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(10px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes underlineSlide {
+    0% {
+        width: 0;
+        left: 0;
+    }
+    100% {
+        width: 100%;
+        left: 0;
+    }
+}
+
+/* Micro-interaction utility classes */
+.social-icon {
+    animation: socialIconEntrance 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.social-icon:nth-child(1) { animation-delay: 0.1s; }
+.social-icon:nth-child(2) { animation-delay: 0.2s; }
+.social-icon:nth-child(3) { animation-delay: 0.3s; }
+.social-icon:nth-child(4) { animation-delay: 0.4s; }
+
+.nav-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-300);
+    transition: width 0.3s ease-out;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+    width: 100%;
+}
+
+.section-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-logo-container {
+    transition: all 0.3s ease-out;
+}
+
+.skill-logo-container:hover {
+    transform: scale(1.1);
+    filter: grayscale(0) brightness(1.1);
+}
+
+.skill-logo-container:not(:hover) {
+    filter: grayscale(0.3);
+}
+
+.skill-logo-container:hover ~ .skill-logo-container,
+.skill-logo-container:has(~ .skill-logo-container:hover) {
+    transform: scale(0.95);
+    filter: grayscale(0.6);
+}
+
+.profile-photo {
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+.profile-photo:hover {
+    transform: scale(1.02) rotate(2deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.profile-photo:focus {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 4px var(--primary-300);
+}
+
+.skill-text {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: skillTextReveal 0.6s ease-out forwards;
+}
+
+.skill-text:nth-child(1) { animation-delay: 0.1s; }
+.skill-text:nth-child(2) { animation-delay: 0.15s; }
+.skill-text:nth-child(3) { animation-delay: 0.2s; }
+.skill-text:nth-child(4) { animation-delay: 0.25s; }
+.skill-text:nth-child(5) { animation-delay: 0.3s; }
+.skill-text:nth-child(6) { animation-delay: 0.35s; }
+.skill-text:nth-child(7) { animation-delay: 0.4s; }
+.skill-text:nth-child(8) { animation-delay: 0.45s; }
+.skill-text:nth-child(9) { animation-delay: 0.5s; }
+.skill-text:nth-child(10) { animation-delay: 0.55s; }
+
+@keyframes skillTextReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

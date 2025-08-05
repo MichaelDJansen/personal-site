@@ -24,13 +24,13 @@ const Header: React.FC<THeaderProps> = ({ className }) => {
 
   return (
     <>
-      <header className={`bg-secondary text-white px-4 py-4 w-full flex justify-between items-center gap-2 ${className ?? ""}`} role="banner">
-        <img className="header-logo" alt="site logo" src={getAssetPath("/assets/MJ-logo.png")} width={64} height={64}/>
+      <header className={`bg-secondary text-white px-4 py-4 w-full flex justify-between items-center gap-2 sticky top-0 z-10 ${className ?? ""}`} role="banner">
+        <img className="header-logo cursor-pointer" alt="site logo" src={getAssetPath("/assets/MJ-logo.png")} width={64} height={64} />
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-4" role="navigation" aria-label="Main navigation">
-          <a href="#skills-section" aria-label="Navigate to skills section" className="hover:text-primary-300 transition-colors">Skills</a>
-          <a href="#experience-section" aria-label="Navigate to experience section" className="hover:text-primary-300 transition-colors">Experience</a>
+          <a href="#skills-section" aria-label="Navigate to skills section" className="nav-link hover:text-primary-300 transition-colors px-2 py-1">Skills</a>
+          <a href="#experience-section" aria-label="Navigate to experience section" className="nav-link hover:text-primary-300 transition-colors px-2 py-1">Experience</a>
         </nav>
         
         {/* Desktop Contact Button */}
