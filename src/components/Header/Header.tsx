@@ -3,10 +3,9 @@
 
 import { useState } from 'react';
 import { getAssetPath } from "@/utils";
-import Button from "../Button/Button";
 import HamburgerButton from "../HamburgerButton/HamburgerButton";
 import MobileMenu from "../MobileMenu/MobileMenu";
-import Link from 'next/link';
+import MagneticButton from '../MagneticButton/MagneticButton';
 
 type THeaderProps = {
   className?: string;
@@ -38,7 +37,7 @@ const Header: React.FC<THeaderProps> = ({ className }) => {
         
         {/* Desktop Contact Button */}
         <a href="mailto:michaeldjansen35@gmail.com" aria-label="Send email to Michael David Jansen" className="hidden md:block">
-          <Button text="Contact Me"/>
+          <MagneticButton>Contact Me</MagneticButton>
         </a>
 
         {/* Mobile Hamburger Button */}
