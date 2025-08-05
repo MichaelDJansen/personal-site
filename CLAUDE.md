@@ -79,3 +79,6 @@ This is a Next.js 13+ portfolio website using the App Router with TypeScript and
 - Color contrast compliance with WCAG 2.1 AA standards
 - Reduced motion support respecting user preferences
 - Focus management and visible focus indicators
+
+### General Development Rules
+- Use Context7 and serena mcp for all code generation to ensure latest versions are being used
