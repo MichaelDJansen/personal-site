@@ -12,7 +12,7 @@ const spaceGrotesk = Space_Grotesk({subsets: ["latin"], weight: ["400", "700"]})
 
 export const metadata = {
   title: 'Michael David Jansen',
-  description: 'Web Developer Portfolio Site',
+  description: 'Web Developer Portfolio Site'
 };
 
 type TRootLayout = {

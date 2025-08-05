@@ -29,7 +29,7 @@ const MagneticButton: React.FC<MagneticButtonProps> = ({
 
   return (
     <div
-      ref={ref as React.RefObject<HTMLDivElement>}
+      ref={ref as React.RefObject<HTMLDivElement | null>}
       className={`magnetic-button-wrapper ${className}`}
       style={{
         transform: isActive ? `translate3d(${position.x}px, ${position.y}px, 0)` : 'none',

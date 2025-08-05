@@ -25,7 +25,7 @@ export const useMagneticEffect = (config: Partial<MagneticConfig> = {}) => {
   const [position, setPosition] = useState<MagneticPosition>({ x: 0, y: 0 });
   const [isDesktop, setIsDesktop] = useState(false);
   const [shouldReduceMotion, setShouldReduceMotion] = useState(false);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number>(undefined);
   const targetPosition = useRef<MagneticPosition>({ x: 0, y: 0 });
 
   const magneticConfig = useMemo(() => ({ ...defaultConfig, ...config }), [config]);
